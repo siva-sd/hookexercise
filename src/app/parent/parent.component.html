@@ -1,0 +1,11 @@
+<p>parent works!</p>
+<div class="cont">
+    <input type="text" #inputdata (focus)="0">&nbsp;
+    <button type="submit" (click)="senddata(inputdata)"class="btn btn-success">Send</button>
+<app-child [message]="msgtochild" *ngIf="!detroycomp">   
+    <p #temp>hi from child(data given from parent):{{msgtochild}}</p> 
+</app-child>
+<br><br><br>
+<button type="submit"(click)="todestroy()" class="buton">Show / Hide</button>
+</div>
+
